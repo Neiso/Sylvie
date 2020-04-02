@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'style/style.css' %}">
+<div class="biography">
+    <div id="biography-text" class="colb-4">
+        <h1>Biographie</h1>
+        <p>Peintre autodidacte, graphiste de formation, diplômée en graphisme-publicitaire.</p>
+        <p>J’ai travaillé aux Editions du Lombard comme maquettiste-coloriste à la mise en page de revues spécialisées BD et de Bandes dessinées, ainsi qu’aux coloriages de nombreuses BD.</p>
+        <p>Mon orientation professionnelle a ensuite pris d’autres chemins  et ce n’est qu’en 2008 que j’ai retrouvé mes crayons et surtout mes pinceaux.</p>
+        <p>Je pratique l'art de l'Aquarelle en me laissant guider par les couleurs.
+           Elles m'inspirent  tantôt du figuratif, tantôt de l'abstrait,
+           au gré de mon humeur 
+           L'eau est un élément difficile à maîtriser, ainsi que les pigments qui se jouent de moi,
+           c'est pourquoi l'aquarelle offre tant de surprises et tant de déclinaisons, je ne suis jamais tout à fait maître de mon œuvre!</p>
+        <p>Le graphisme et le trompe-l’œil ainsi que la technique dite ‘négatif’ occupent une part importante dans mes réalisations ;
+           « pourquoi faire simple quand on peut faire compliqué ? » serait ma devise en peinture.</p>
+        <p>La peinture Acrylique me permet quant à elle de laisser libre cours à mon imagination et mes peintures sont emportées dans un tourbillon de couleurs et de textures.
+           Je suis toujours en recherche de techniques, c’est pourquoi le travail d’autres médiums ou autres matières m’inspirent (couture, vitraux, création de sac,…).</p>
+    </div>
+    <div id="biography-photo" class="colb-8">
+        <img src="{% static 'srcs/slides/slide1.jpg' %}" alt="profil picture" id="slide" class="">
+    </div> 
+</div>
+{% endblock %}
