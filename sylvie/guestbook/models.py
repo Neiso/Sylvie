@@ -9,7 +9,5 @@ class Commentaire(models.Model):
     comment = models.CharField(max_length = 600)
     status = models.BooleanField(default = False)
 
-    list_display = ('date', 'comment')
-
     def __str__(self):
         return self.name

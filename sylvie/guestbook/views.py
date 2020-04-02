@@ -1,10 +1,11 @@
 from django.shortcuts import render
 from .models import Commentaire
+from django.conf import settings
 
 # Create your views here.
 
 def renderGuestbook(request):
-    rawData = Commentaire.objects.all()
+    rawData = Commentaire.objects.order_by('-date')
     return render(request, 'guestbook.html', {'comments': rawData})
 
 def addMessage(request):

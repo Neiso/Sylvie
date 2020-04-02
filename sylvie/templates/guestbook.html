@@ -21,17 +21,14 @@
     </div>
 </div>
 
-<div class="line-break">
-    <br>
-</div>
+<div class="linebreak"></div>
 
 <div class="comments-container">
     {% for comment in comments %}
         {% if comment.status %}
-            <h1>{{ comment.name }}</h1>
-            <h3>{{ comment.email }}</h3>
+            <p id="name-comment">{{ comment.name }}, le {{comment.date}}</p>
             <p>{{ comment.comment }}</p>
-            <p>{{ comment.date}}</p>
+            <div class="linebreak-small"></div>
         {% endif %}
     {% endfor %}
 </div>

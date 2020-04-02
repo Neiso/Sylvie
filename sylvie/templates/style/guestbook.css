@@ -20,7 +20,7 @@ textarea {
 
 .input-container{
     margin-top: 3em;
-    height: 600px;
+    height: 500px;
     width: 100%;
 }
 
@@ -37,7 +37,7 @@ textarea {
 .guestbook-photo img {
     float: right;
     object-fit: cover;
-    height: 73%;
+    height: 84%;
     width: 66%;
     margin-top: 5px;
     margin-right: -15%;
@@ -64,8 +64,31 @@ textarea {
     height: 25px;
 }
 
-.line-break {
-    height: 100px;
+.linebreak {
     border-style: solid;
-    border-color: rgb(167, 195, 240);
+    border-top: 1px;
+    border-color: rgb(197, 225, 227);
+    width: 75%;
+    margin-left: 12%;
+}
+
+.linebreak-small{
+    border-style: solid;
+    border-top: 1px;
+    border-color: rgb(197, 225, 227);
+    width: 25%;
+    margin-left: 37%;
+}
+
+.comments-container{
+    text-align: center;
+}
+
+.comments-container p {
+    margin-top: 20px;
+}
+
+#name-comment{
+    margin-top: 25px;
+    font-size: 25px;
 }
