@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'guestbook',
+    'biography',
+    'expo'
 ]
 
 MIDDLEWARE = [
@@ -123,3 +125,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "templates")
 ]
+
+MEDIA_ROOT = TEMPLATES_DIR + '/srcs/'
