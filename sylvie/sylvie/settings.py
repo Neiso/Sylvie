@@ -126,4 +126,5 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "templates")
 ]
 
-MEDIA_ROOT = TEMPLATES_DIR + '/srcs/'
+MEDIA_ROOT = BASE_DIR + '/templates/srcs/'
+MEDIA_URL = '/templates/srcs/'

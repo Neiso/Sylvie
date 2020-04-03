@@ -1,37 +1,44 @@
-.expo-container {
+.expo-container-main {
     width: 70%;
     height: 800px;
     margin-left: 15%;
-    margin-top: 25px;
+    margin-top: 3em;
 }
 
-.expo {
+.expo-main {
     width: 100%;
-    height: 30%;
-    border: solid 1px black;
+    height: 50%;
+    /* border: solid 1px black; */
     margin-top: 20px;
 }
 
-.expo img {
+.expo-main img {
     position: relative;
     float: left;
     object-fit: cover;
-    object-position: -50px -20%;
+    object-position: 50% -20%;
     width: 20%;
-    height: 80%;
-    margin-top: 25px;
+    height: 100%;
+    /* margin-top: 25px; */
 }
 
-.expo h1 {
+.expo-main h1 {
     position: relative;
     float: left;
     padding-left: 20px;
     width: 75%;
 }
 
-.expo p {
+.expo-main p{
     width: 75%;
     position: relative;
     float: left;
     padding-left: 20px;
+}
+
+.expo-main a {
+    width: 75%;
+    position: relative;
+    float: left;
+    padding-left: 20px;   
 }

@@ -1,7 +1,10 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import ExpoModel
 
 # Create your views here.
 
 def renderExpo(request):
-    return(render(request, 'expo.html'))
+    expos = ExpoModel.objects.all()
+    for expo in expos:
+        print (expo.link)
+    return(render(request, 'expo.html', {'expos':expos}))

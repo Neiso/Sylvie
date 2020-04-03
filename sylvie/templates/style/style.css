@@ -51,7 +51,7 @@
   }
 
 body {
-    height: 1500px;
+    /* height: 1500px; */
     margin-left: 0px;
     margin-right: 0px;
 }
@@ -94,7 +94,7 @@ body {
 .biography {
     margin-top: 3em;
     width: 100%;
-    height: 60em;
+    /* height: 60em; */
 }
 
 #biography-text {
@@ -125,9 +125,8 @@ body {
     float: right;
     object-fit: cover;
     height: 70%;
-    width: 65%;
+    width: 55%;
     margin-top: 10%;
-    margin-right: -15%;
     transform: translate(-50%, 0);
 }
 
@@ -142,4 +141,47 @@ body {
 
 #slide.fade{
     opacity: 0;
+}
+
+#expo-header {
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+.expo-container {
+    margin-top: 30px;
+    width: 70%;
+    margin-left: 15%;
+    height: 300px;
+    /* border: solid 1px black; */
+}
+
+.expo {
+    margin-left: 10%;
+    float: left;
+    width: 20%;
+    height: 100%;
+    /* border: solid 1px black; */
+}
+
+.expo img {
+    object-fit: cover;
+    width: 100%;
+    height: 80%;
+}
+
+.expo p {
+    text-align: center;
+    padding-top: 5px;
+    padding-right: 50px;
+    width: 120%;
+}
+
+.linebreak {
+    border-bottom: 1px solid black;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 20px;
+    margin-bottom: 50px;
 }

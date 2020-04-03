@@ -4,17 +4,17 @@
 
 <link rel="stylesheet" href="{% static 'style/expo.css' %}">
 
-<div class="expo-container">
-    <div class="expo">
-        <img src="{% static 'srcs/expo/Namur.jpg' %}" alt="">
-        <h1>Titre + Lieu + Date</h1><br>
-        <p>Description</p>
-    </div>
-    <div class="expo">
-        <img src="{% static 'srcs/expo/Namur.jpg' %}" alt="">
-        <h1>Titre + Lieu + Date</h1><br>
-        <p>Description</p>
-    </div>
+<div class="expo-container-main">
+    <div class="linebreak"><br></div>
+    {% for expo in expos %}
+        <div class="expo-main">
+            <img src="/static/srcs/{{expo.photo.name}}" alt="">
+            <h1>{{expo.title}}</h1><br>
+            <p>{{expo.desc}}</p>
+            <a href="{{expo.link}}" id="expo-id">{{expo.link}}</a>
+        </div>
+        <div class="linebreak"><br></div>
+    {% endfor %}
 </div>
 
 {% endblock %}

@@ -24,4 +24,16 @@
     </div> 
 </div>
 <script src="{% static 'js/slideshow.js' %}"></script>
+<br>
+<h1 id="expo-header">
+    Expositions à venir :
+</h1>
+<div class="expo-container">
+    {% for expo in expos %}
+        <div class="expo">
+            <a href="/expo"><img src="/static/srcs/{{expo.photo.name}}" alt=""></a>
+            <p>{{expo.desc}}</p>
+        </div>
+    {% endfor %}
+</div>
 {% endblock %}
