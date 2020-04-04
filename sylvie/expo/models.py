@@ -9,3 +9,6 @@ class ExpoModel (models.Model):
     desc = models.CharField(max_length=1000)
     date = models.DateField(editable=True, db_index=True)
     link = models.CharField(max_length=200, blank=True)
+
+    def __str__(self):
+        return self.name

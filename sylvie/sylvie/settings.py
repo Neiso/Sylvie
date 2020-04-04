@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'guestbook',
     'biography',
-    'expo'
+    'expo',
+    'peinture'
 ]
 
 MIDDLEWARE = [

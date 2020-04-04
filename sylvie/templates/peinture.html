@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<link rel="stylesheet" href="{% static 'style/peinture.css' %}">
+<div class="peinture-container">
+    {% for categorie in categories %}
+        <div class="peinture-section">
+            <h1>{{categorie}}</h1>
+                {% for peinture in peintures %}
+                    {% if peinture.categorie == categorie %}
+                    <div class="peinture">
+                        <img src="/static/srcs/{{peinture.photo.name}}" alt="{{peinture.name}}">
+                        <h4>{{peinture.name}}</h4>
+                    </div>  
+                    {% endif %}
+                {% endfor %}
+        </div>
+        <div class="linebreak-peinture"></div>
+    {% endfor %}
+</div>
+
+
+{% endblock %}

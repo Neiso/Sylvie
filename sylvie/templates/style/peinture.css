@@ -1,0 +1,46 @@
+.peinture-container{
+    width: 80%;
+    height: 80vh;
+    margin-left: 10%;
+}
+
+.peinture-section{
+    width: 100%;
+    height: 60%;
+    /* overflow-block: auto; */
+    /* border: 1px solid black; */
+
+}
+
+.peinture-section h1 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.peinture {
+    float: left;
+    margin-left: 2.5%;
+    width: 30%;
+    height: 80%;
+    /* border: 1px solid black; */
+    margin-bottom: 50px;
+}
+
+.peinture img {
+    object-fit: scale-down;
+    height: 100%;
+    width: 100%;
+}
+
+.peinture h4 {
+    text-align: center;
+    margin-top: 5px;
+    height: auto;
+}
+
+.linebreak-peinture {
+    width: 100%;
+    height: 1px;
+    clear: both;
+}

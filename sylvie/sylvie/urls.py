@@ -25,4 +25,5 @@ urlpatterns = [
     path('', include('biography.urls')),
     path('', include('guestbook.urls')),
     path('', include('expo.urls')),
+    path('', include('peinture.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
