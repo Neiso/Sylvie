@@ -4,23 +4,53 @@
 {% block content %}
 
 
+<script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
 <link rel="stylesheet" href="{% static 'style/peinture.css' %}">
+
+<div id="display-container">
+    <img src="" alt="" id="display-container-img">
+</div>
+
 <div class="peinture-container">
-    {% for categorie in categories %}
+        {% for categorie in categories %}
         <div class="peinture-section">
             <h1>{{categorie}}</h1>
-                {% for peinture in peintures %}
-                    {% if peinture.categorie == categorie %}
-                    <div class="peinture">
-                        <img src="/static/srcs/{{peinture.photo.name}}" alt="{{peinture.name}}">
-                        <h4>{{peinture.name}}</h4>
-                    </div>  
-                    {% endif %}
-                {% endfor %}
+            {% for peinture in peintures %}
+            {% if peinture.categorie == categorie %}
+            <div class="peinture">
+                <img src="/static/srcs/{{peinture.photo.name}}" alt="{{peinture.name}}" id="img{{peinture.id}}">
+                <h4>{{peinture.name}}</h4>
+            </div>  
+            {% endif %}
+            {% endfor %}
         </div>
         <div class="linebreak-peinture"></div>
     {% endfor %}
 </div>
 
+<script>
+    var clicked = false
+    document.addEventListener('click', function(e) {
+        clicked = !clicked
+        var container = document.getElementById("display-container")
+        var container_img = document.getElementById("display-container-img")
+        var navbar = document.getElementById("navbar");
+        if (clicked){
+            e = e || window.event;
+            var target = e.target || e.srcElement
+            console.log(container)
+            console.log(clicked)
+            container_img.src = target.src
+            console.log(container_img)
+            navbar.classList.remove("sticky-top")
+        }
+        else {
+            container_img.src = ""
+        }
+
+    }, false);
+</script>
 
 {% endblock %}
