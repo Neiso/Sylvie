@@ -10,6 +10,9 @@ textarea {
     .form {
         padding-left: 30px;
     }
+    .guestbook-photo {
+        visibility: hidden;
+    }
 }
     
     @media only screen and (min-width: 769px) {
@@ -36,6 +39,7 @@ textarea {
 
 .guestbook-photo img {
     float: right;
+    position: relative;
     object-fit: cover;
     height: 84%;
     width: 66%;

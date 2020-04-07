@@ -11,9 +11,10 @@
 
 <div id="display-container">
     <img src="" alt="" id="display-container-img">
+    <h1 id="display-container-h1">Hello world</h1>
 </div>
 
-<div class="peinture-container">
+<div class="peinture-container" id="peintures-container">
         {% for categorie in categories %}
         <div class="peinture-section">
             <h1>{{categorie}}</h1>
@@ -21,7 +22,7 @@
             {% if peinture.categorie == categorie %}
             <div class="peinture">
                 <img src="/static/srcs/{{peinture.photo.name}}" alt="{{peinture.name}}" id="img{{peinture.id}}">
-                <h4>{{peinture.name}}</h4>
+                <h4 id="name{{peinture.id}}">{{peinture.name}}</h4>
             </div>  
             {% endif %}
             {% endfor %}
@@ -31,23 +32,30 @@
 </div>
 
 <script>
-    var clicked = false
+    var clicked = true
     document.addEventListener('click', function(e) {
-        clicked = !clicked
         var container = document.getElementById("display-container")
         var container_img = document.getElementById("display-container-img")
-        var navbar = document.getElementById("navbar");
+        var container_h1 = document.getElementById("display-container-h1")
+        var peinture_container = document.getElementById("peintures-container")
         if (clicked){
             e = e || window.event;
             var target = e.target || e.srcElement
-            console.log(container)
-            console.log(clicked)
-            container_img.src = target.src
-            console.log(container_img)
-            navbar.classList.remove("sticky-top")
+            if (target.tagName == 'IMG'){
+                var peinture_name = document.getElementById("name" + target.id[3] + target.id[4])
+                clicked = !clicked
+                container.style.visibility="visible"
+                peinture_container.style.opacity = "0.1"
+                container_img.src = target.src
+                container_h1.innerHTML = peinture_name.innerHTML
+                console.log(screen.width/2, target.naturalWidth/2)
+            }
         }
         else {
             container_img.src = ""
+            container.style.visibility="hidden"
+            peinture_container.style.opacity = "1"
+            clicked = !clicked
         }
 
     }, false);
