@@ -11,7 +11,7 @@
 
 <div id="display-container">
     <img src="" alt="" id="display-container-img">
-    <h1 id="display-container-h1">Hello world</h1>
+    <h1 id="display-container-h1"></h1>
 </div>
 
 <div class="peinture-container" id="peintures-container">
@@ -42,7 +42,12 @@
             e = e || window.event;
             var target = e.target || e.srcElement
             if (target.tagName == 'IMG'){
-                var peinture_name = document.getElementById("name" + target.id[3] + target.id[4])
+                var name_id = ""
+                for (i=3; i<target.id.length; i++){
+                    name_id += target.id[i]
+                }
+                console.log("name" + name_id)
+                var peinture_name = document.getElementById("name" + name_id)
                 clicked = !clicked
                 container.style.visibility="visible"
                 peinture_container.style.opacity = "0.1"

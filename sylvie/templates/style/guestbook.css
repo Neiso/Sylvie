@@ -2,22 +2,18 @@ textarea {
     resize: none;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1249px) {
     /* For mobile phones: */
-    [class*="row-"] {
+    [class*="rowd-"] {
         width: 100%;
     }
     .form {
-        padding-left: 30px;
+        position: relative;
+        float: left;
+        padding-left: 10px;
     }
     .guestbook-photo {
         visibility: hidden;
-    }
-}
-    
-    @media only screen and (min-width: 769px) {
-    #form {
-        padding-left: 20%;
     }
 }
 
@@ -27,9 +23,9 @@ textarea {
     width: 100%;
 }
 
-.row-3{width: 25%;}
+.rowd-3{width: 25%;}
 
-.row-9{width: 75%;}
+.rowd-9{width: 70%;}
 
 .guestbook-photo {
     position: relative;
@@ -48,11 +44,14 @@ textarea {
     transform: translate(-50%, 0);
 }
 
-.form {
-    position: relative;
-    float: left;
-    height: 100%;
-    padding-left: 5%;
+@media only screen and (min-width: 1250px){
+    .form {
+        position: relative;
+        float: left;
+        margin-left: 20px;
+        height: 100%;
+        padding-left: 5%;
+    }
 }
 
 .form label {
@@ -74,6 +73,7 @@ textarea {
     border-color: rgb(197, 225, 227);
     width: 75%;
     margin-left: 12%;
+    clear: both;
 }
 
 .linebreak-small{

@@ -19,13 +19,26 @@
   [class*="colb-"] {
     width: 100%;
   }
+  #biography-text{
+      position: relative;
+  }
+
   #biography-text p {
     font-size: large;
     padding-left: 30px;
+    padding-right: 15px;
     }
   #biography-text h1 {
     font-size: 50px;
-    padding-left: 30%;
+    text-align: center;
+}
+
+  .expo{
+      width: 100%;
+  }
+
+  #biography-photo {
+    display: none;
   }
 }
 
@@ -114,10 +127,12 @@ body {
     font-size: 20px;
 }
 
-#biography-photo {
-    position: relative;
-    float: right;
-    height: 80%;
+@media only screen and (min-width: 769px){
+    #biography-photo {
+        position: relative;
+        float: right;
+        height: 80%;
+    }
 }
 
 #biography-photo img {
@@ -156,12 +171,14 @@ body {
     /* border: solid 1px black; */
 }
 
-.expo {
-    margin-left: 10%;
-    float: left;
-    width: 20%;
-    height: 100%;
-    /* border: solid 1px black; */
+@media only screen and (min-width: 769px){
+    .expo {
+        margin-left: 10%;
+        float: left;
+        width: 20%;
+        height: 100%;
+        /* border: solid 1px black; */
+    }
 }
 
 .expo img {
@@ -175,14 +192,6 @@ body {
     padding-top: 5px;
     padding-right: 50px;
     width: 120%;
-}
-
-.linebreak {
-    border-bottom: 1px solid black;
-    width: 50%;
-    margin-left: 25%;
-    margin-top: 20px;
-    margin-bottom: 50px;
 }
 
 .sticky {

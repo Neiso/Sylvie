@@ -5,18 +5,18 @@
 <link rel="stylesheet" href="{% static 'style/guestbook.css' %}">
 
 <div class="input-container">
-    <div class="form row-3">
+    <div class="form rowd-3">
         <form action="addMessage" method="GET" class="form">
             <label for="name">Prénom et nom:</label>
             <input type="text" id="name" name="name" placeholder="Nom et prenom" maxlength="50" required>
             <label for="adresse-mail">Adresse mail:</label>
             <input type="text" id="adresse-mail" name="email" placeholder="Adresse mail" maxlength="50">
             <label for="commentaire">Votre commentaire:</label><br>
-            <textarea name="commentaire" id="commentaire" cols="40" rows="13" maxlength="600" placeholder="Commentaire ..." required></textarea>
+            <textarea name="commentaire" id="commentaire" cols="32" rows="10" maxlength="600" placeholder="Commentaire ..." required></textarea>
             <button type="submit" id="button">Envoyer</button>
         </form>
     </div>
-    <div class="guestbook-photo row-9">
+    <div class="guestbook-photo rowd-9">
         <img src="{% static 'srcs/bg-guestbook.jpg' %}" alt="bg_guestbook">
     </div>
 </div>
@@ -28,7 +28,9 @@
         {% if comment.status %}
             <p id="name-comment">{{ comment.name }}, le {{comment.date}}</p>
             <p>{{ comment.comment }}</p>
-            <div class="linebreak-small"></div>
+            {% if not forloop.last %}
+                <div class="linebreak-small"></div>
+            {% endif %}
         {% endif %}
     {% endfor %}
 </div>

@@ -11,9 +11,11 @@
             <img src="/static/srcs/{{expo.photo.name}}" alt="">
             <h1>{{expo.title}}</h1><br>
             <p>{{expo.desc}}</p>
-            <a href="{{expo.link}}" id="expo-id">{{expo.link}}</a>
+            <a href="{{expo.link}}" id="expo-link">{{expo.link}}</a>
         </div>
-        <div class="linebreak"><br></div>
+        {% if not forloop.last%}
+            <div class="linebreak"><br></div>
+        {% endif %}
     {% endfor %}
 </div>
 

@@ -1,3 +1,80 @@
+@media only screen and (max-width: 767px){
+    .peinture {
+        float: left;
+        margin-left: 2%;
+        width: 100%;
+        height: 60%;
+        /* border: 1px solid black; */
+        margin-bottom: 80px;
+    }
+    #display-container {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        visibility: hidden;
+        padding-bottom: 20%;
+        z-index: 1;
+    }
+    
+    #display-container img {
+        object-fit: cover;
+        margin-left: 15px;
+        margin-top: 80px;
+        max-height: 37%;
+        opacity: 1;
+        float: left;
+    }
+    
+    #display-container h1 {
+        float: left;
+        margin-left: 15px;
+        text-decoration: underline;
+        text-align: center;
+        position: absolute;
+        font-size: 30px;
+    }
+}
+
+
+
+@media only screen and (min-width: 768px){
+    .peinture {
+        float: left;
+        margin-left: 8%;
+        width: 40%;
+        height: 80%;
+        /* border: 1px solid black; */
+        margin-bottom: 50px;
+    }
+
+    #display-container {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        visibility: hidden;
+        padding-bottom: 20%;
+        z-index: 1;
+    }
+    
+    #display-container img {
+        object-fit: cover;
+        margin-left: 35px;
+        margin-top: 80px;
+        max-height: 65%;
+        opacity: 1;
+        float: left;
+    }
+    
+    #display-container h1 {
+        float: left;
+        margin-left: 80px;
+        text-decoration: underline;
+        position: absolute;
+    }
+}
+
+
+
 .peinture-container{
     width: 80%;
     height: 80vh;
@@ -7,7 +84,6 @@
 .peinture-section{
     width: 100%;
     height: 60%;
-
 }
 
 .peinture-section h1 {
@@ -19,13 +95,41 @@
     border-bottom: 1px solid grey;
 }
 
-.peinture {
-    float: left;
-    margin-left: 2.5%;
-    width: 30%;
-    height: 80%;
-    /* border: 1px solid black; */
-    margin-bottom: 50px;
+@media only screen and (min-width: 1251px){
+    .peinture {
+        float: left;
+        margin-left: 2.5%;
+        width: 30%;
+        height: 80%;
+        /* border: 1px solid black; */
+        margin-bottom: 50px;
+    }
+
+    #display-container {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        visibility: hidden;
+        padding-bottom: 20%;
+        z-index: 1;
+    }
+    
+    #display-container img {
+        object-fit: cover;
+        margin-left: 35px;
+        margin-top: 80px;
+        max-height: 80%;
+        opacity: 1;
+        float: left;
+    }
+    
+    #display-container h1 {
+        float: left;
+        margin-left: 80px;
+        text-decoration: underline;
+        float: left;
+        position: absolute;
+    }
 }
 
 .peinture img {
@@ -50,28 +154,6 @@
     clear: both;
 }
 
-#display-container {
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    visibility: hidden;
-    padding-bottom: 20%;
-    z-index: 1;
-}
-
-#display-container img {
-    object-fit: cover;
-    margin-left: 35px;
-    max-height: 80%;
-    opacity: 1;
-    float: left;
-}
-
-#display-container h1 {
-    float: left;
-    margin-left: 25px;
-    text-decoration: underline;
-}
 
 /* body{
     opacity: 0.3;
