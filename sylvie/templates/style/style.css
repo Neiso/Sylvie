@@ -164,10 +164,11 @@ body {
 }
 
 .expo-container {
+    display: block;
     margin-top: 30px;
     width: 70%;
     margin-left: 15%;
-    height: 300px;
+    height: 500px;
     /* border: solid 1px black; */
 }
 
@@ -204,3 +205,37 @@ body {
 .sticky + .content {
     padding-top: 60px;
   }
+
+br{
+    clear: both;
+}
+
+.footer{
+    margin-top: 50px;
+    display: block;
+    width: 100%;
+    height: 100px;
+    background-color: #5A436F;
+    border-top: solid 1px white;
+}
+
+.footer p{
+    padding-top: 20px;
+}
+
+#copyright{
+    color: white;
+    font-weight: 700;
+    float: left;
+    text-align:right;
+    width:58%;
+}
+
+
+#copyright-djulian {
+    color: white;
+    font-weight: 700;
+    float: left;
+    text-align:right;
+    width:42%;
+}
