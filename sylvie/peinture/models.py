@@ -10,11 +10,13 @@ class Peinture(models.Model):
     ENCRES = 'Encres'
     HUILES = 'Huiles'
     AQUARELLES = 'Aquarelles'
+    DEMOS = 'Demos'
     GROUPE=[
         (AQUARELLES,'Aquarelles'),
         (ACRYLIQUES, 'Acryliques'),
         (ENCRES, 'Encres'),
         (HUILES, 'Huiles'),
+        (DEMOS, 'Demos'),
     ]
 
     name = models.CharField(max_length=100, blank=True)

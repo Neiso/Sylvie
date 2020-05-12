@@ -6,4 +6,5 @@ urlpatterns = [
     path('encres', renderStyle, {'style_name':'Encres'}),
     path('acryliques', renderStyle, {'style_name':'Acryliques'}),
     path('huiles', renderStyle, {'style_name':'Huiles'}),
+    path('demos', renderStyle, {'style_name':'Demos'}),
 ]
